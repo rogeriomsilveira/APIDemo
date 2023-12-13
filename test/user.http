@@ -1,0 +1,38 @@
+## All tests were made using Rest Client extension in Visual Studio Code
+
+### Get data from all users
+### 
+GET http://localhost/user/all HTTP/1.1
+
+### Get data from specific user
+### by user_id
+GET http://localhost/user/1 HTTP/1.1
+
+### Get data from specific user
+### by user_name
+GET http://localhost/user/mikegray HTTP/1.1
+
+### Post data to users
+###
+POST http://localhost/user HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Jules Murphy",
+    "username": "jmurphy",
+	"email": "jmurphy@yahoo.com",
+	"password": "Abcd1987"
+}
+
+### Put data to users by user_id
+###
+PUT http://localhost/user/13 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Jules Richard Murphy"
+}
+
+### Deletes data from users
+### by user_id
+DELETE http://localhost/user/13 HTTP/1.1

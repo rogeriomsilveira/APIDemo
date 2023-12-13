@@ -1,0 +1,28 @@
+## All tests were made using Rest Client extension in Visual Studio Code
+
+### Gets all products from carts
+### depending on customer_id
+GET http://localhost/cart/all/customer/1 HTTP/1.1
+
+### Gets data from products that ARE NOT in the cart
+### depending on customer_id
+GET http://localhost/cart/absent/customer/1 HTTP/1.1
+
+### Posts data to cart
+### based on body
+POST http://localhost/cart/product HTTP/1.1
+content-type: application/json
+
+{
+    "customer_id": 1,
+    "product_id": 7,
+	"quantity": 10
+}
+
+### Deletes data from cart
+### depending on product_id and customer_id
+DELETE http://localhost/cart/product/7/customer/1 HTTP/1.1
+
+### Deletes all products from cart
+### depending on customer_id
+DELETE http://localhost/cart/all/customer/4 HTTP/1.1

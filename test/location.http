@@ -1,0 +1,24 @@
+## All tests were made using Rest Client extension in Visual Studio Code
+
+### Read all entries from locations
+### by user_id
+GET http://localhost/location/all/user/1 HTTP/1.1
+
+### Read the last location from user
+### by user_id
+GET http://localhost/location/last/user/1 HTTP/1.1
+
+### Create new location to user
+### 
+POST http://localhost/location HTTP/1.1
+content-type: application/json
+
+{
+    "user_id": 1,
+    "latitude": 38.032120,
+	"longitude": -78.477510
+}
+
+### Deletes all entries from locations
+### depending on user_id
+DELETE http://localhost/location/all/user/1 HTTP/1.1
